@@ -1,6 +1,10 @@
 {
-  "name": "Start on Heroku: PHP",
-  "description": "A barebones PHP app that makes use of the Silex web framework",
-  "repository": "https://github.com/heroku/php-getting-started",
-  "addons": []
-}
+  "version": 2,
+  "routes": [
+    { "src": "/", "dest": "/web/index.php" }
+  ],
+  "functions": {
+    "api/*.php": {
+      "runtime": "now-php@0.0.10"
+    }
+  }
