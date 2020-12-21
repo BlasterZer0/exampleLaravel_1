@@ -4,6 +4,7 @@
 <title>Student Management | Edit</title>
 </head>
 <body>
+<div>
 <form action = "/edit/<?php echo $users[0]->id; ?>" method = "post">
 <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
 <table>
@@ -35,5 +36,7 @@ value = '<?php echo$users[0]->password; ?>'/>
 </tr>
 </table>
 </form>
+</div>
+
 </body>
 </html> 
