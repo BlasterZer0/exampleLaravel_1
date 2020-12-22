@@ -34,6 +34,6 @@ $password = $request->input('password');
 DB::update('update users set name=?,email=?,password=? where id = ?',[$name,$email,$password,$id]);
 echo "Record updated successfully.
 ";
-echo 'Click Here to go back.';
+echo '<a href = "/edit-records">Click Here</a> to go back.';
 }
 } 
