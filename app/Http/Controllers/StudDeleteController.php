@@ -24,6 +24,6 @@ public function destroy($id) {
 DB::delete('delete from users where id = ?',[$id]);
 echo "Record deleted successfully.
 ";
-echo 'Click Here to go back.';
+echo '<a href = "/edit-records">Click Here</a> to go back.';
 }
 }
