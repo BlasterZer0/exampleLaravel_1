@@ -18,16 +18,18 @@
 <td>ID</td>
 <td>Name</td>
 <td>Email</td>
-<td>Contraseña</td>
+<!--<td>Contraseña</td>-->
 <td>Editar</td>
+<td>Eliminar</td>
 </tr>
 @foreach ($users as $user)
 <tr>
 <td>{{ $user->id }}</td>
 <td>{{ $user->name }}</td>
 <td>{{ $user->email }}</td>
-<td>{{ $user->password }}</td>
+<!--<td>{{ $user->password }}</td>-->
 <td><a href = 'edit/{{ $user->id }}'>Editar</a></td>
+<td><a href = 'delete/{{ $user->id }}'>Delete</a></td>
 </tr>
 @endforeach
 </table>
