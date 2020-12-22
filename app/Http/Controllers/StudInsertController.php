@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class StudInsertController extends Controller {
     
@@ -26,7 +27,9 @@ class StudInsertController extends Controller {
    public function insert(Request $request) {
       $name = $request->input('name');
       $email = $request->input('email');
-      $password = $request->input('password');
+      //$password = $request->input('password');
+      $hashed = $request->input('password');
+      $password = Hash::make($hashed);
       //DB::insert('insert into users (name),(email) values(?)',[$name,$email]);
       DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,$password]);
       echo "Record inserted successfully.<br/>";
