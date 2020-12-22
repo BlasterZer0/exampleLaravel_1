@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 class StudUpdateController extends Controller {
     
      /**
@@ -28,6 +29,8 @@ public function edit(Request $request,$id) {
 $name = $request->input('name');
 $email = $request->input('email');
 $password = $request->input('password');
+$hashed = $request->input('password');
+$password = Hash::make($hashed);
 //$data=array('first_name'=>$first_name,"last_name"=>$last_name,"city_name"=>$city_name,"email"=>$email);
 //DB::table('student')->update($data);
 // DB::table('student')->whereIn('id', $id)->update($request->all());
