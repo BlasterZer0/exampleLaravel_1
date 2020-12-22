@@ -30,6 +30,6 @@ class StudInsertController extends Controller {
       //DB::insert('insert into users (name),(email) values(?)',[$name,$email]);
       DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,$password]);
       echo "Record inserted successfully.<br/>";
-      echo '<a href = "/insert">Click Here</a> to go back.';
+      echo '<a href = "/edit-records">Click Here</a> to go back.';
    }
 }
