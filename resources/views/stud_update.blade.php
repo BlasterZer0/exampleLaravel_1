@@ -32,6 +32,7 @@ value = '<?php echo$users[0]->password; ?>'/>
 <tr>
 <td colspan = '2'>
 <input type = 'submit' value = "Update User" />
+<a href = "/edit-records">Volver</a>
 </td>
 </tr>
 </table>
