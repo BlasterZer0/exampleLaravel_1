@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header">{{ __('Usuarios') }} echo '<a href = "/insert">Nuevo Usuario</a>; </div>
+                <div class="card-header">{{ __('Usuarios') }} <a href = "/insert">Nuevo Usuario</a> </div>
                 <div>
 <table border = "1">
 <tr>
