@@ -22,6 +22,7 @@
             <tr>
                <td colspan = '2'>
                   <input type = 'submit' value = "Add student"/>
+                  <a href = "/edit-records">Volver</a>
                </td>
             </tr>
          </table>
