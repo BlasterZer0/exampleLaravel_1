@@ -28,7 +28,7 @@ class StudInsertController extends Controller {
       $name = $request->input('name');
       $email = $request->input('email');
       //$password = $request->input('password');
-      $hashed = $request->input('password');
+      $hashed = $request->input::get('password');
       $password = Hash::make($hashed);
       //DB::insert('insert into users (name),(email) values(?)',[$name,$email]);
       DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,$password]);
