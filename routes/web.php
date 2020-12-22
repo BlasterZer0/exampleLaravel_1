@@ -13,23 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
 Route::get('/', function () {
     return view('auth/login');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-//Route::get('/stud_edit_view', [App\Http\Controllers\StudUpdateController::class, 'index'])->name('stud_edit_view');
-//Route::get('/stud_create', [App\Http\Controllers\StudInsertController::class])->name('stud_create');
-//Route::get('/stud_edit_view', function () {
-//    return view('stud_edit_view');
-//})->name('stud_edit_view');
 //Route::('/')
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Edit Data
 Route::get('edit-records','App\Http\Controllers\StudUpdateController@index');
