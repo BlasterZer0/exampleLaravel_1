@@ -33,7 +33,7 @@ value = '<?php echo$users[0]->email; ?>'/>
 </tr>
 <tr>
 <td>Contraseña</td>
-<td>
+<td colspan="2">
 <input type = 'text' name = 'password'
 value = '<?php echo$users[0]->password; ?>'/>
 </td>
