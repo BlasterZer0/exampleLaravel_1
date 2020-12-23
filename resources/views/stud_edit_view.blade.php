@@ -45,17 +45,12 @@
 <link href=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css rel=stylesheet>
 <table data-sort-order=desc data-toggle=table>
 <thead>
-<tr>
-<th data-sortable=true>id</th>
-<th data-sortable=true>name</th>
-<th data-sortable=true>email</th>
-</tr
 @foreach ($users as $user)
 <tr>
-<th>{{ $user->id }}</th>
-<th>{{ $user->name }}</th>
-<th>{{ $user->email }}</th>
-</tr>
+<th data-field=name data-sortable=true>{{ $user->id }}
+<th data-field=stargazers_count data-sortable=true>{{ $user->name }}
+<th data-field=forks_count data-sortable=true>{{ $user->email }}
+
 </thead>
 @endforeach
 </table>
