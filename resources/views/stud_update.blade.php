@@ -41,7 +41,8 @@ value = '<?php echo$users[0]->password; ?>'/>
 <tr>
 <td colspan = '2'>
 <input type = 'submit' value = "Update User" class = "btn btn-success" />
-<button type = "button" class = "btn btn-default" ><a href = "/edit-records">Volver</a></button>
+//<button type = "button" class = "btn btn-default" ><a href = "/edit-records">Volver</a></button>
+<a href = "/edit-records" class = "btn btn-success">Volver</a>
 </td>
 </tr>
 </table>
