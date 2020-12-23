@@ -12,8 +12,10 @@
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header">
-                <div class="media-left">{{ __('Usuarios') }}</div>
-                <div class="media-right"><a href = "/insert" class="btn btn-success">Nuevo Usuario</a></div> 
+                <div class="d-flex">
+                 <div class="mr-auto p-2">{{ __('Usuarios') }}</div>
+                 <div class="ml-auto p-2"><a href = "/insert" class="btn btn-success">Nuevo Usuario</a></div>
+                </div>
                 </div>
 <div>
 <table border = "1">
