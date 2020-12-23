@@ -45,11 +45,17 @@
 <link href=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css rel=stylesheet>
 <table data-sort-name=id_count data-sort-order=desc data-toggle=table>
 <thead>
+<tr>
+<th data-sortable=true>id</th>
+<th data-sortable=true>name</th>
+<th data-sortable=true>email</th>
+</tr>
 @foreach ($users as $user)
 <tr>
-<th data-field={{ $user->id }} data-sortable=true>id
-<th data-field={{ $user->name }} data-sortable=true>name
-<th data-field={{ $user->email }} data-sortable=true>email
+<td>{{ $user->id }}</td>
+<td>{{ $user->name }}</td>
+<td>{{ $user->email }}</td>
+</tr>
 </thead>
 @endforeach
 </table>
