@@ -40,8 +40,10 @@ value = '<?php echo$users[0]->password; ?>'/>
 </tr>
 <tr>
 <td colspan = '2'>
-<input type = 'submit' value = "Update User" class = "btn btn-success" />
-<a href = "/edit-records" class = "btn btn-secondary">Volver</a>
+<div class="d-flex">
+<div class="mr-auto p-2"><input type = 'submit' value = "Update User" class = "btn btn-success" /></div>
+<div class="ml-auto p-2"><a href = "/edit-records" class = "btn btn-secondary">Volver</a></div>
+</div>
 </td>
 </tr>
 </table>
