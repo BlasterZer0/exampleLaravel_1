@@ -54,7 +54,7 @@ tr:nth-child(even) {
 <td>{{ $user->id }}</td>
 <td>{{ $user->name }}</td>
 <td>{{ $user->email }}</td>
-<!--<td>{{ $user->password }}</td>-->
+<td>{{ $user->password }}</td>
 <td><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
 <td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>
 </tr>
