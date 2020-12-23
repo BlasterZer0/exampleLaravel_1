@@ -30,7 +30,7 @@
             <tr>
                <td colspan = '2'>
                   <input type = 'submit' value = "Añadir Usuario" class="btn btn-success"/>
-                  <a href = "/edit-records" class="btn btn-default">Volver</a>
+                  <a href = "/edit-records" class="btn btn-secondary">Volver</a>
                </td>
             </tr>
          </table>
