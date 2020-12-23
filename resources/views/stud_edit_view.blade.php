@@ -69,40 +69,19 @@ tr:nth-child(even) {
 <table id="myTable">
   <tr>
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
+    <th>ID</th>
     <th onclick="sortTable(0)">Name</th>
-    <th onclick="sortTable(1)">Country</th>
+    <th onclick="sortTable(1)">Email</th>
+    <th>Editar</th>
+    <th>Eliminar</th>
   </tr>
   <tr>
-    <td>Berglunds snabbkop</td>
-    <td>Sweden</td>
-  </tr>
-  <tr>
-    <td>North/South</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Koniglich Essen</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>Paris specialites</td>
-    <td>France</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Canada</td>
+<td>{{ $user->id }}</td>
+<td>{{ $user->name }}</td>
+<td>{{ $user->email }}</td>
+<!--<td>{{ $user->password }}</td>-->
+<td><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
+<td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>
   </tr>
 </table>
 
