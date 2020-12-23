@@ -51,7 +51,7 @@ $(document).ready(function() {
 <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>ID</th>
+                <th class="sorting" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">ID</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Edit</th>
