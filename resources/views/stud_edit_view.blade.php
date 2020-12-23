@@ -45,7 +45,7 @@ tr:nth-child(even) {
 <td>ID</td>
 <td>Name</td>
 <td>Email</td>
-<!--<td>Contraseña</td>-->
+<td>Contraseña</td>
 <td>Editar</td>
 <td>Eliminar</td>
 </tr>
