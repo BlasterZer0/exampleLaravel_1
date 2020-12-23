@@ -43,12 +43,12 @@
 <div>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css rel=stylesheet>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css rel=stylesheet>
-<table data-sort-name=id data-sort-order=desc data-toggle=table>
+<table data-sort-order=desc data-toggle=table>
 <thead>
 <tr>
-<td>ID</td>
-<td>Name</td>
-<td>Email</td>
+<th data-sortable=true>id</th>
+<th data-sortable=true>name</th>
+<th data-sortable=true>email</th>
 </tr
 @foreach ($users as $user)
 <tr>
