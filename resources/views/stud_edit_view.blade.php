@@ -14,7 +14,7 @@
                 <div class="card-header">
                 <div class="d-flex">
                  <!--<div class="mr-auto p-2">{{ __('Usuario') }}</div>-->
-                 <div class="mr-auto p-2"><h2><span class="glyphicon glyphicon-user"></span></h2></div>
+                 <div class="mr-auto p-2"><span class="glyphicon glyphicon-user"></span></div>
                  <div class="ml-auto p-2"><a href = "/insert" class="btn btn-success">Nuevo Usuario</a></div>
                 </div>
                 </div>
@@ -41,8 +41,9 @@
 </table>
 </div>
 <div>
-<link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css rel=stylesheet>
+<!--<link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css rel=stylesheet>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css rel=stylesheet>
+-->
 <table data-sort-name=stargazers_count data-sort-order=desc data-toggle=table data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1">
 <thead>
 <tr>
