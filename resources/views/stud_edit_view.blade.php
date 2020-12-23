@@ -43,29 +43,33 @@
 <div>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css rel=stylesheet>
 <link href=https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css rel=stylesheet>
-<script>
-$(document).ready(function() {
-    $('#example').DataTable();
-} );
-</script>
-<table id="example" class="table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th class="sorting" tabindex="0" aria-controls="example" aria-label="Name: activate to sort column ascending">ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
+<div class="row">
+<div class="container"> 
+  
+  <h1>Bootstrap 3 SortTable</h1> 
+  <table class="table responsive" id="sort">
+	<thead>
+		<tr>
+			<th scope="col">ID</th>
+			<th scope="col">Name</th>
+			<th scope="col">Email</th>
+			<th scope="col">Edit</th>
+			<th scope="col">Delete</th>
+		</tr>
+	</thead>
 @foreach ($users as $user)
         <tbody>
             <tr>
-                <td>{{ $user->id }}</td>
+            <td data-table-header="ID">{{ $user->id }}</td>
+			<td data-table-header="Name">{{ $user->name }}</td>
+			<td data-table-header="Email">{{ $user->email }}</td>
+			<td data-table-header="Edit"><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
+			<td data-table-header="Delete"><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>
+        <!--        <td>{{ $user->id }}</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
-                <td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>
+                <td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>-->
             </tr>
         </tbody>    
 @endforeach
