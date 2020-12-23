@@ -41,6 +41,8 @@
 </table>
 </div>
 <div>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css rel=stylesheet>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css rel=stylesheet>
 <table data-sort-name=stargazers_count data-sort-order=desc data-toggle=table data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1">
 <thead>
 <tr>
