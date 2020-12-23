@@ -46,11 +46,18 @@
 <table data-sort-name=id data-sort-order=desc data-toggle=table>
 <thead>
 <tr>
-<td data-field=id data-sortable=true>id</td>
-<td data-sortable=true>name</td>
-<td data-sortable=true>email</td>
-<td data-sortable=true>editar</td>
-<td data-sortable=true>eliminar</td>
+<th data-field=id data-sortable=true>id</th>
+<th data-sortable=true>name</th>
+<th data-sortable=true>email</th>
+<th data-sortable=true>editar</th>
+<th data-sortable=true>eliminar</th>
+</tr>
+<tr>
+<td data-sortable=true></td>
+<td data-sortable=true></td>
+<td data-sortable=true></td>
+<td data-sortable=true></td>
+<td data-sortable=true></td>
 </tr>
 @foreach ($users as $user)
 <tr>
