@@ -40,6 +40,17 @@
 @endforeach
 </table>
 </div>
+<div>
+<table data-sort-name=stargazers_count data-sort-order=desc data-toggle=table data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1">
+<thead>
+<tr>
+<th data-field=name data-sortable=true>Name
+<th data-field=stargazers_count data-sortable=true>Stars
+<th data-field=forks_count data-sortable=true>Forks
+<th data-field=description data-sortable=true>Description
+</thead>
+</table>
+</div>
 
                 
             </div>
