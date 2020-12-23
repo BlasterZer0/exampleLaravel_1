@@ -39,7 +39,7 @@ value = '<?php echo$users[0]->password; ?>'/>
 </td>
 </tr>
 <tr>
-<td colspan = '2'>
+<td>
 <div class="d-flex">
 <div class="mr-auto p-2"><input type = 'submit' value = "Update User" class = "btn btn-success" /></div>
 <div class="ml-auto p-2"><a href = "/edit-records" class = "btn btn-secondary">Volver</a></div>
