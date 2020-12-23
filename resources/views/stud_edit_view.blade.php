@@ -13,7 +13,7 @@
             <div class="card">
                 <div class="card-header">
                 <div class="d-flex">
-                 <div class="mr-auto p-2">{{ __('Usuarios') }}</div>
+                 <div class="mr-auto p-2">{{ __('glyphicon glyphicon-user') }}</div>
                  <div class="ml-auto p-2"><a href = "/insert" class="btn btn-success">Nuevo Usuario</a></div>
                 </div>
                 </div>
