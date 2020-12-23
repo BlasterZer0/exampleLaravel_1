@@ -13,8 +13,8 @@
             <div class="card">
                 <div class="card-header">
                 <div class="d-flex">
-                 <!--<div class="mr-auto p-2">{{ __('Usuario') }}</div>-->
-                 <div class="mr-auto p-2"><h3><span class="glyphicon glyphicon-user"></span></h3></div>
+                 <div class="mr-auto p-2">{{ __('Usuario') }}</div>
+                  <!--<div class="mr-auto p-2"><h3><span class="glyphicon glyphicon-user"></span></h3></div>-->
                  <div class="ml-auto p-2"><a href = "/insert" class="btn btn-success">Nuevo Usuario</a></div>
                 </div>
                 </div>
@@ -43,18 +43,22 @@
 <div>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css rel=stylesheet>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css rel=stylesheet>
-<table data-sort-name=id_count data-sort-order=desc data-toggle=table>
+<table data-sort-name=id data-sort-order=desc data-toggle=table>
 <thead>
 <tr>
-<th data-sortable=true>id</th>
+<th data-field=id data-sortable=true>id</th>
 <th data-sortable=true>name</th>
 <th data-sortable=true>email</th>
+<th data-sortable=true>editar</th>
+<th data-sortable=true>eliminar</th>
 </tr>
 @foreach ($users as $user)
 <tr>
 <td>{{ $user->id }}</td>
 <td>{{ $user->name }}</td>
 <td>{{ $user->email }}</td>
+<td><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
+<td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>
 </tr>
 </thead>
 @endforeach
