@@ -29,8 +29,8 @@
             </tr>
             <tr>
                <td colspan = '2'>
-                  <input type = 'submit' value = "Añadir Usuario"/>
-                  <a href = "/edit-records">Volver</a>
+                  <input type = 'submit' value = "Añadir Usuario" class="btn btn-success"/>
+                  <a href = "/edit-records" class="btn btn-default">Volver</a>
                </td>
             </tr>
          </table>
