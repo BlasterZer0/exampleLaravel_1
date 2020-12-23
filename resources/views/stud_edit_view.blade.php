@@ -80,7 +80,7 @@ tr:nth-child(even) {
     <td>{{ $user->email }}</td>
     <td><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
     <!--<td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>-->
-    <td><a class="btn btn-danger" onclick="return confirm('Are you sure?')" href='delete/{{ $user->id }}'><i class="fa fa-trash"></i></a></td>
+    <td><a class="btn btn-danger" onclick="return confirm('Are you sure?')" href='delete/{{ $user->id }}'><i class="fa fa-trash"></i>Borrar</a></td>
   </tr>
 @endforeach
 </table>
