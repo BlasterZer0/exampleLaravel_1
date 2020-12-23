@@ -63,16 +63,13 @@ tr:nth-child(even) {
 </div>
 -->
 <div>
-<p><strong>Click the headers to sort the table.</strong></p>
-<p>The first time you click, the sorting direction is ascending (A to Z).</p>
-<p>Click again, and the sorting direction will be descending (Z to A):</p>
 
 <table id="myTable">
   <tr>
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
-    <th>ID</th>
-    <th onclick="sortTable(0)">Name</th>
-    <th onclick="sortTable(1)">Email</th>
+    <th onclick="sortTable(0)">ID</th>
+    <th onclick="sortTable(1)">Name</th>
+    <th onclick="sortTable(2)">Email</th>
     <th>Editar</th>
     <th>Eliminar</th>
   </tr>
