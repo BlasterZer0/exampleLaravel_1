@@ -41,21 +41,30 @@
 </table>
 </div>
 <div>
-<link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css rel=stylesheet>
-<link href=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css rel=stylesheet>
-<table data-sort-order=desc data-toggle=table>
-<thead>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css rel=stylesheet>
+<link href=https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css rel=stylesheet>
+<table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
 @foreach ($users as $user)
-<tr>
-<th data-field=name>{{ $user->id }}
-<th data-field=stargazers_count>{{ $user->name }}
-<th data-field=forks_count>{{ $user->email }}
-
-</thead>
+        <tbody>
+            <tr>
+                <td>{{ $user->id }}</td>
+                <td>{{ $user->name }}</td>
+                <td>{{ $user->email }}</td>
+                <td><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
+                <td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>
+            </tr>
+        </tbody>    
 @endforeach
 </table>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.js></script>
 </div>
 
                 
