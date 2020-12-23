@@ -14,7 +14,7 @@
                 <div class="card-header">
                 <div class="d-flex">
                  <!--<div class="mr-auto p-2">{{ __('Usuario') }}</div>-->
-                 <div class="mr-auto p-2"><span class="glyphicon glyphicon-user"></span></div>
+                 <div class="mr-auto p-2"><h3><span class="glyphicon glyphicon-user"></span></h3></div>
                  <div class="ml-auto p-2"><a href = "/insert" class="btn btn-success">Nuevo Usuario</a></div>
                 </div>
                 </div>
@@ -41,17 +41,17 @@
 </table>
 </div>
 <div>
-<!--<link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css rel=stylesheet>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css rel=stylesheet>
 <link href=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css rel=stylesheet>
--->
-<table data-sort-name=stargazers_count data-sort-order=desc data-toggle=table data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1">
+<table data-sort-name=id_count data-sort-order=desc data-toggle=table>
 <thead>
+@foreach ($users as $user)
 <tr>
-<th data-field=name data-sortable=true>Name
-<th data-field=stargazers_count data-sortable=true>Stars
-<th data-field=forks_count data-sortable=true>Forks
-<th data-field=description data-sortable=true>Description
+<th data-field={{ $user->id }} data-sortable=true>id
+<th data-field={{ $user->name }} data-sortable=true>name
+<th data-field={{ $user->email }} data-sortable=true>email
 </thead>
+@endforeach
 </table>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.js></script>
