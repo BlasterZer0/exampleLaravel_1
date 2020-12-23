@@ -11,8 +11,11 @@
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header">{{ __('Usuarios') }} <a href = "/insert" class="btn btn-success">Nuevo Usuario</a> </div>
-                <div>
+                <div class="card-header">
+                <div class="media-left">{{ __('Usuarios') }}</div>
+                <div class="media-right"><a href = "/insert" class="btn btn-success">Nuevo Usuario</a></div> 
+                </div>
+<div>
 <table border = "1">
 <tr>
 <td>ID</td>
@@ -35,7 +38,7 @@
 </table>
 </div>
 
-                </div>
+                
             </div>
         </div>
     </div>
