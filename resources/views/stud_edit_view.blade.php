@@ -47,9 +47,9 @@
 <thead>
 @foreach ($users as $user)
 <tr>
-<th data-field=name data-sortable=true>{{ $user->id }}
-<th data-field=stargazers_count data-sortable=true>{{ $user->name }}
-<th data-field=forks_count data-sortable=true>{{ $user->email }}
+<th data-field=name>{{ $user->id }}
+<th data-field=stargazers_count>{{ $user->name }}
+<th data-field=forks_count>{{ $user->email }}
 
 </thead>
 @endforeach
