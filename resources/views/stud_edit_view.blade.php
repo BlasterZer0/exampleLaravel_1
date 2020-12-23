@@ -46,26 +46,15 @@
 <table data-sort-name=id data-sort-order=desc data-toggle=table>
 <thead>
 <tr>
-<th data-field=id data-sortable=true>id</th>
-<th data-sortable=true>name</th>
-<th data-sortable=true>email</th>
-<th data-sortable=true>editar</th>
-<th data-sortable=true>eliminar</th>
-</tr>
-<tr>
-<td data-sortable=true></td>
-<td data-sortable=true></td>
-<td data-sortable=true></td>
-<td data-sortable=true></td>
-<td data-sortable=true></td>
-</tr>
+<td>ID</td>
+<td>Name</td>
+<td>Email</td>
+</tr
 @foreach ($users as $user)
 <tr>
-<td>{{ $user->id }}</td>
-<td>{{ $user->name }}</td>
-<td>{{ $user->email }}</td>
-<td><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
-<td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>
+<th data-sortable=true>{{ $user->id }}</th>
+<th data-sortable=true>{{ $user->name }}</th>
+<th data-sortable=true>{{ $user->email }}</th>
 </tr>
 </thead>
 @endforeach
