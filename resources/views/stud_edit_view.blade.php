@@ -38,6 +38,7 @@ tr:nth-child(even) {
                  <div class="ml-auto p-2"><a href = "/insert" class="btn btn-success">Nuevo Usuario</a></div>
                 </div>
                 </div>
+<!--
 <div>
 <table border = "1">
 <tr>
@@ -60,7 +61,7 @@ tr:nth-child(even) {
 @endforeach
 </table>
 </div>
-
+-->
 <div>
 <p><strong>Click the headers to sort the table.</strong></p>
 <p>The first time you click, the sorting direction is ascending (A to Z).</p>
