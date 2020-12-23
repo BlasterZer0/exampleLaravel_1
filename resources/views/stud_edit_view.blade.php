@@ -52,9 +52,9 @@
 </tr
 @foreach ($users as $user)
 <tr>
-<th data-sortable=true>{{ $user->id }}</th>
-<th data-sortable=true>{{ $user->name }}</th>
-<th data-sortable=true>{{ $user->email }}</th>
+<th>{{ $user->id }}</th>
+<th>{{ $user->name }}</th>
+<th>{{ $user->email }}</th>
 </tr>
 </thead>
 @endforeach
