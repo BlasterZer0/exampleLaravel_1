@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Panel de control') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,12 +13,15 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    {{ __('You are logged in!') }}
-
+                <div>
+                    {{ __('Haz iniciado sesión') }}
+                    <br/>
+                    <br>
+                </div>
 <!--------------------------------------------------------------------------------------------->
-<a href = "/edit-records">Tabla de usuarios</a>
-
+<div>
+<a class="btn btn-info btn-block" href = "/edit-records">Tabla de usuarios</a>
+</div>
 
 
                 </div>

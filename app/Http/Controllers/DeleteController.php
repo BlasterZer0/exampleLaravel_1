@@ -4,7 +4,7 @@ use Illuminate\Http\Request;
 use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-class StudDeleteController extends Controller {
+class DeleteController extends Controller {
     
      /**
      * Create a new controller instance.
@@ -18,12 +18,10 @@ class StudDeleteController extends Controller {
     
 public function index(){
 $users = DB::select('select * from users');
-return view('stud_edit_view',['users'=>$users]);
+return view('edit_db',['users'=>$users]);
 }
 public function destroy($id) {
 DB::delete('delete from users where id = ?',[$id]);
-echo "Record deleted successfully.
-";
-echo '<a href = "/edit-records">Click Here</a> to go back.';
+return redirect('/edit-records')->with('status', 'Registro eliminado con éxito');
 }
 }

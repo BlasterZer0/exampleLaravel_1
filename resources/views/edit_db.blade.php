@@ -33,9 +33,12 @@ tr:nth-child(even) {
             <div class="card">
                 <div class="card-header">
                 <div class="d-flex">
-                 <div class="mr-auto p-2">{{ __('Usuario') }}</div>
-                  <!--<div class="mr-auto p-2"><h3><span class="glyphicon glyphicon-user"></span></h3></div>-->
-                 <div class="ml-auto p-2"><a href = "/insert" class="btn btn-success">Nuevo Usuario</a></div>
+                <div class="mr-auto p-2">{{ __('Usuario') }}</div>
+                 <!--<div class="mr-auto p-2"><h3><span class="glyphicon glyphicon-user"></span></h3></div>-->
+                 <div class="ml-auto p-2">
+                 <a href = "/home" class="btn btn-secondary">Regresar</a>
+                 <a href = "/insert" class="btn btn-success">Nuevo Usuario</a>
+                 </div>
                 </div>
                 </div>
 <!--
@@ -63,6 +66,13 @@ tr:nth-child(even) {
 </div>
 -->
 <div>
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
+</div>
+<div>
 
 <table id="myTable">
   <tr>
@@ -80,7 +90,7 @@ tr:nth-child(even) {
     <td>{{ $user->email }}</td>
     <td><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
     <!--<td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>-->
-    <td><a class="btn btn-danger" onclick="return confirm('Are you sure?')" href='delete/{{ $user->id }}'><i class="fa fa-trash"></i>Borrar</a></td>
+    <td><a class="btn btn-danger" onclick="return confirm('¿Estás Seguro?')" href='delete/{{ $user->id }}'><i class="fa fa-trash"></i>Borrar</a></td>
   </tr>
 @endforeach
 </table>

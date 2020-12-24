@@ -23,12 +23,12 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Edit Data
-Route::get('edit-records','App\Http\Controllers\StudUpdateController@index');
-Route::get('edit/{id}','App\Http\Controllers\StudUpdateController@show');
-Route::post('edit/{id}','App\Http\Controllers\StudUpdateController@edit');
+Route::get('edit-records','App\Http\Controllers\UpdateController@index');
+Route::get('edit/{id}','App\Http\Controllers\UpdateController@show');
+Route::post('edit/{id}','App\Http\Controllers\UpdateController@edit');
 //Delete Data
-Route::get('delete-records','App\Http\Controllers\StudDeleteController@index');
-Route::get('delete/{id}','App\Http\Controllers\StudDeleteController@destroy'); 
+Route::get('delete-records','App\Http\Controllers\DeleteController@index');
+Route::get('delete/{id}','App\Http\Controllers\DeleteController@destroy'); 
 //Insert Data
-Route::get('insert','App\Http\Controllers\StudInsertController@insertform');
-Route::post('create','App\Http\Controllers\StudInsertController@insert'); 
+Route::get('insert','App\Http\Controllers\InsertController@insertform');
+Route::post('create','App\Http\Controllers\InsertController@insert'); 
