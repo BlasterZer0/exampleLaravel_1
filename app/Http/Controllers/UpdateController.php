@@ -31,13 +31,12 @@ return view('update_db',['users'=>$users]);
 public function edit(Request $request,$id) {
 $name = $request->input('name');
 $email = $request->input('email');
-$password = $request->input('password');
-$hashed = $request->input('password');
-$password = Hash::make($hashed);
+$password = Hash::make($request->input('password'));
+$updated_at = date('Y-m-d H:i:s');
 //$data=array('first_name'=>$first_name,"last_name"=>$last_name,"city_name"=>$city_name,"email"=>$email);
 //DB::table('student')->update($data);
 // DB::table('student')->whereIn('id', $id)->update($request->all());
-DB::update('update users set name=?,email=?,password=? where id = ?',[$name,$email,$password,$id]);
+DB::update('update users set name=?,email=?,password=?,updated_at=? where id = ?',[$name,$email,$password,$updated_at,$id]);
 //return redirect()->to('/edit-records');
 return redirect('/edit-records')->with('status', 'Registro actualizado con éxito');
 }

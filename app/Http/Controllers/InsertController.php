@@ -24,15 +24,16 @@ class InsertController extends Controller {
    public function insertform() {
       return view('create_db');
    }
-	
    public function insert(Request $request) {
       $name = $request->input('name');
       $email = $request->input('email');
       //$password = $request->input('password');
       $hashed = $request->input('password');
       $password = Hash::make($hashed);
+      $created_at = date('Y-m-d H:i:s');
+      $updated_at = date('Y-m-d H:i:s');
       //DB::insert('insert into users (name),(email) values(?)',[$name,$email]);
-      DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,$password]);
+      DB::insert('insert into users (name,email,password,created_at,updated_at) values(?,?,?,?,?)',[$name,$email,$password,$created_at,$updated_at]);
       return redirect('/edit-records')->with('status', 'Registro insertado correctamente');
    }
 }
