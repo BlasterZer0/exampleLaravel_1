@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UpdateController;
+use App\Http\Controllers\DeleteController;
+use App\Http\Controllers\InsertController;
+use App\Http\Controllers\PDFController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +27,14 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Edit Data
-Route::get('edit-records','App\Http\Controllers\UpdateController@index');
-Route::get('edit/{id}','App\Http\Controllers\UpdateController@show');
-Route::post('edit/{id}','App\Http\Controllers\UpdateController@edit');
+Route::get('edit-records', [UpdateController::class, 'index']);
+Route::get('edit/{id}', [UpdateController::class, 'show']);
+Route::post('edit/{id}', [UpdateController::class, 'edit']);
+//PDF
+Route::get('create-pdf', [PDFController::class, 'exportPDF']);
 //Delete Data
-Route::get('delete-records','App\Http\Controllers\DeleteController@index');
-Route::get('delete/{id}','App\Http\Controllers\DeleteController@destroy'); 
+Route::get('delete-records', [DeleteController::class, 'index']);
+Route::get('delete/{id}', [DeleteController::class, 'destroy']);
 //Insert Data
-Route::get('insert','App\Http\Controllers\InsertController@insertform');
-Route::post('create','App\Http\Controllers\InsertController@insert'); 
+Route::get('insert', [InsertController::class, 'insertform']);
+Route::post('create', [InsertController::class, 'insert']);

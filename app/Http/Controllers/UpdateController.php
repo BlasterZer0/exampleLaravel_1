@@ -5,6 +5,8 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use PDF;
+
 class UpdateController extends Controller {
     
      /**
@@ -21,6 +23,7 @@ public function index(){
 $users = DB::select('select * from users');
 return view('edit_db',['users'=>$users]);
 }
+
 public function show($id) {
 $users = DB::select('select * from users where id = ?',[$id]);
 return view('update_db',['users'=>$users]);

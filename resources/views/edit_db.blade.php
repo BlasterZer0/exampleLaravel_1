@@ -37,34 +37,12 @@ tr:nth-child(even) {
                  <!--<div class="mr-auto p-2"><h3><span class="glyphicon glyphicon-user"></span></h3></div>-->
                  <div class="ml-auto p-2">
                  <a href = "/home" class="btn btn-secondary">Regresar</a>
+                 <a href="{{ URL::to('create-pdf') }}" class="btn btn-primary">Descargar PDF</a>
                  <a href = "/insert" class="btn btn-success">Nuevo Usuario</a>
                  </div>
                 </div>
                 </div>
-<!--
-<div>
-<table border = "1">
-<tr>
-<td>ID</td>
-<td>Name</td>
-<td>Email</td>
-<td>Contraseña</td>
-<td>Editar</td>
-<td>Eliminar</td>
-</tr>
-@foreach ($users as $user)
-<tr>
-<td>{{ $user->id }}</td>
-<td>{{ $user->name }}</td>
-<td>{{ $user->email }}</td>
-<td>{{ $user->password }}</td>
-<td><a href = 'edit/{{ $user->id }}' class="btn btn-warning">Editar</a></td>
-<td><a href = 'delete/{{ $user->id }}' class="btn btn-danger">Borrar</a></td>
-</tr>
-@endforeach
-</table>
-</div>
--->
+
 <div>
 @if (session('status'))
     <div class="alert alert-success">
@@ -78,8 +56,8 @@ tr:nth-child(even) {
   <tr>
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
     <th onclick="sortTable(0)">ID</th>
-    <th onclick="sortTable(1)">Name</th>
-    <th onclick="sortTable(2)">Email</th>
+    <th onclick="sortTable(1)">Nombre</th>
+    <th onclick="sortTable(2)">Correo electrónico</th>
     <th>Editar</th>
     <th>Eliminar</th>
   </tr>

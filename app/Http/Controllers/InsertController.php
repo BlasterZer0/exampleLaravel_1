@@ -33,8 +33,6 @@ class InsertController extends Controller {
       $password = Hash::make($hashed);
       //DB::insert('insert into users (name),(email) values(?)',[$name,$email]);
       DB::insert('insert into users (name,email,password) values(?,?,?)',[$name,$email,$password]);
-      echo "Record inserted successfully.<br/>";
-      echo '<a href = "/edit-records">Click Here</a> to go back.';
       return redirect('/edit-records')->with('status', 'Registro insertado correctamente');
    }
 }
