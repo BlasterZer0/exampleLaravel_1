@@ -55,9 +55,9 @@ tr:nth-child(even) {
 <table id="myTable">
   <tr>
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
-    <th onclick="sortTable(0)">ID</th>
-    <th onclick="sortTable(1)">Nombre</th>
-    <th onclick="sortTable(2)">Correo electrónico</th>
+    <th>ID</th>
+    <th onclick="sortTable(0)">Nombre</th>
+    <th onclick="sortTable(1)">Correo electrónico</th>
     <th>Editar</th>
     <th>Eliminar</th>
   </tr>
