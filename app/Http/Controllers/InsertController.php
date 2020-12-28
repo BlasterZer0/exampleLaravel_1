@@ -44,7 +44,7 @@ class InsertController extends Controller {
       $name = $request->input('name');
       $email = $request->input('email');
       //$password = $request->input('password');
-      $hashed = $request->input('password');
+      $hashed = $request->input('password' => ['required', 'string', 'min:8']);
       $password = Hash::make($hashed);
       $created_at = date('Y-m-d H:i:s');
       $updated_at = date('Y-m-d H:i:s');
