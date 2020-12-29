@@ -60,7 +60,7 @@ tr:nth-child(even) {
    <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->  
     <th>ID</th>
     <th onclick="sortTable(0)">Nombre</th>
-    <th onclick="sortTable(0)">Correo electrónico</th>
+    <th onclick="sortTable(1)">Correo electrónico</th>
     <th>Editar</th>
     <th>Eliminar</th>
   </tr>
