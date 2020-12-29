@@ -24,28 +24,20 @@ class InsertController extends Controller {
    public function insertform() {
       return view('create_db');
    }
-    
-     /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
-    }
-    
+      
    public function insert(Request $request) {
+
+    $validated = $request->validate([
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        'password' => ['required', 'string', 'min:8'],
+    ]);
+
       $name = $request->input('name');
       $email = $request->input('email');
       //$password = $request->input('password');
-      $hashed = $request->input('password');
-      $password = Hash::make($hashed);
+      //$hashed = $request->input('password');
+      $password = Hash::make($request->input('password'));
       $created_at = date('Y-m-d H:i:s');
       $updated_at = date('Y-m-d H:i:s');
       //DB::insert('insert into users (name),(email) values(?)',[$name,$email]);

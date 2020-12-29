@@ -29,6 +29,13 @@ $users = DB::select('select * from users where id = ?',[$id]);
 return view('update_db',['users'=>$users]);
 }
 public function edit(Request $request,$id) {
+
+    $validated = $request->validate([
+        'name' => ['required', 'string', 'max:255'],
+        'email' => ['required', 'string', 'email', 'max:255'],
+        'password' => ['required', 'string', 'min:8'],
+    ]);
+
 $name = $request->input('name');
 $email = $request->input('email');
 $password = Hash::make($request->input('password'));
